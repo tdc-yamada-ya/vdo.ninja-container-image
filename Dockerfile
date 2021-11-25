@@ -7,7 +7,7 @@ RUN git clone https://github.com/steveseguin/vdo.ninja.git -b v19.4 --depth 1 /v
 FROM nginx:1.21.4-alpine
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=clone /vdo.ninja/ /vdo.ninja/
+COPY --from=clone /vdo.ninja/ /var/www/html/vdo.ninja/
 
 # VDO.Ninja web port
 EXPOSE 80
